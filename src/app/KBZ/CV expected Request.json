@@ -1,0 +1,20 @@
+{
+    "Label":"CV1",
+    "targetSector":"IT",
+    "expectedSalary":"40K",
+    "Description":"It is a test CV",
+    "Skills":
+    [
+        {"SkillLabel":"java","proficiencyLevel":"basic","SkillComment":"java programming language"},
+        {"SkillLabel":"sql","proficiencyLevel":"basic","SkillComment":"sql"}
+    ],
+    "workHistory":
+    [
+        {"position":"developer","from":"2019-01-01","to":"2020-01-01","employer":"QualiChain"}
+    ],
+    "Education":
+    [
+        {"title":"informatic engineering","from":"2015-09-01","to":"2019-01-01","organisation":"","description":""},
+    ]
+}
+
