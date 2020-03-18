@@ -1,0 +1,75 @@
+<div [@routerTransition]>
+    <app-page-header [heading]="'Job'" [icon]="'fa-bars'"></app-page-header>
+    <form [formGroup]="jobpostForm" (ngSubmit)="onFormSubmit()">
+
+    <div class="card mb-3">
+        <app-jobdefine [parentform]="jobpostForm"></app-jobdefine>
+        <!--
+        <div [formGroupName]="i">
+            <app-reqskills [parentform]="jobpostForm" [group]="jobpostForm.controls.SkillReq.controls[i]"></app-reqskills>
+        </div>
+        -->
+        <!--skills-->
+        <div class="card-header">
+            <span>Required Skills</span>
+        </div>
+        <div class="card-body">
+
+            <div formArrayName="SkillReq">
+                <div *ngFor="let skill of jobpostForm.controls.SkillReq.controls; let i=index" class="panel panel-default">
+                <div class="card-subtitle">      
+                    <span>Skill {{i + 1}}</span>
+                    <span class="table-add float-right mb-3 mr-2">
+                        <a class="text-danger" (click)="removeSkill(i)">
+                          <mdb-icon fas icon="minus"></mdb-icon>
+                        </a>
+                    </span>    
+                </div>
+                <div class="card-text" [formGroupName]="i">
+                    <div class="container bootstrap snippet">
+                        <div class="row mb-3">
+                        
+                            <div class="col-md-4">
+                                <label class="text-primary">Name</label>
+                                <input type="text" class="form-control" formControlName="SkillLabel">
+                                <small [hidden]="jobpostForm.controls.SkillReq.controls[i].controls.SkillLabel.valid" class="text-danger">
+                                    Name is required
+                                </small>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="text-primary">Level</label>
+                                <select formControlName="proficiencyLevel" class="browser-default custom-select">
+                                    <option selected value="1">Basic</option>
+                                    <option value="2">Intermediate</option>
+                                    <option value="3">Advanced</option>
+                                </select>                                
+                                
+                            </div>                            
+                            <div class="col-md-4">
+                                <label class="text-primary">Priority</label>
+                                <select class="browser-default custom-select">
+                                    <option selected value="1">Low</option>
+                                    <option value="2">Medium</option>
+                                    <option value="3">High</option>
+                                </select>
+                                <!--<input type="text" class="form-control" formControlName="skillPriority">-->
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+                </div>
+            </div>
+            <span class="table-add float-right mb-3 mr-2">
+                <a class="text-success" (click)="addSkill()">
+                  <mdb-icon fas icon="plus" size="2x"></mdb-icon>
+                </a>
+            </span>    
+        </div>
+
+    </div> 
+    <button class="btn btn-primary"> Post</button>
+
+    </form>    
+</div>

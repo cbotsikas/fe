@@ -1,0 +1,68 @@
+<div class="card mb-3">
+  <p *ngIf="dataSaved && jobpostForm.pristine" ngClass = "success">
+    Jop created successfully.
+  </p>
+  <div class="card-header">
+    <i class="fas fa-user-circle"></i>
+    Job Description
+  </div>
+  
+  <div [formGroup]="parentform" class="card-body">
+    <div class="container bootstrap snippet">
+
+
+      <div class="row mb-3">
+        <div class="col-md-2">
+          <div class="p-0 w-50">
+            <img src="assets/images/4763_-_Jobs-512.png" class="img-thumbnail border-0" />
+          </div>
+        </div>
+        <div class="col-md-4">
+          <h5 class="text-primary">Title</h5>
+          <h5><input formControlName="Label" class="form-control" type=text placeholder="Position"></h5>
+          <!--
+          <div *ngIf="Label.dirty && Label.errors" class = "error"> 
+            <div *ngIf="Label.errors.required"> 
+              Title required.
+            </div>	
+          </div>
+          -->
+          <p><input formControlName="department" class="form-control" type=text placeholder="Department"></p>
+          <h5 class="text-primary">Employment type</h5>
+          <p class="form-group">
+            <select formControlName="employmentType" class="browser-default custom-select" placeholder="Select Type">
+              <option value="1" selected>Full-time</option>
+              <option value="2">Part-time</option>
+              <option value="3">Contract</option>
+              <option value="4">Temporary</option>
+              <option value="5">Volunteer</option>
+              <option value="6">Internship</option>
+            </select>
+          </p>
+  
+          <h5 class="text-primary">Seniority Level</h5>
+          <p class="form-group">
+              <select formControlName="level" class="browser-default custom-select">
+                <option selected>Select one</option>
+                <option value="1">Internship</option>
+                <option value="2">Entry level</option>
+                <option value="3">Associate</option>
+                <option value="4">Mid-Senior level</option>
+                <option value="5">Director</option>
+                <option value="6">Executive</option>
+                <option value="7">Not Applicable</option>
+              </select>
+          </p>
+        </div>
+        <div class="col-md-6">
+          <h5 class="text-info">Description</h5>
+          <textarea formControlName="JobDescription" class="form-control" rows="10" cols="40" name="JobDescription">Briefly explain the type of job you're offering.</textarea>
+        </div>
+      </div>
+
+    </div>
+  </div>
+<p *ngFor="let jobpost of jobposts$ | async">
+	{{jobpost.id}} | {{jobpost.Label}} | 
+  {{jobpost.department}} | {{jobpost.level}}
+</p> 
