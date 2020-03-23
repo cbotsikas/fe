@@ -1,5 +1,5 @@
 {
-    "PersonURI" = "http://somewhere/JohnSmith",
+    "PersonURI": "http://somewhere/JohnSmith",
     "Label":"CV1",
     "targetSector":"IT",
     "expectedSalary":"40K",
