@@ -1,0 +1,86 @@
+export const recruits = [
+    {
+        name: 'Candidate01',
+        role: 'Data Scientist',
+        available: '2019/04/13',
+        expsalary: '32k',
+        score: 70
+    },
+    {
+        name: 'Candidate02',
+        role: 'Data Scientist',
+        available: '2019/04/25',
+        expsalary: '30k',
+        score: 32
+    },
+    {
+        name: 'Candidate03',
+        role: 'Data Scientist',
+        available: '2019/11/01',
+        expsalary: '40k',
+        score: 50
+    },
+    {
+        name: 'José Castelo Branco',
+        role: 'Fashion Extravagant',
+        available: '2020/03/14',
+        expsalary: '47k',
+        score: 35
+    },
+    {
+        name: 'Candidate05',
+        role: 'Data Scientist',
+        available: '2019/07/01',
+        expsalary: '35k',
+        score: 60
+    },
+    {
+        name: 'Candidate06',
+        role: 'Data Scientist',
+        available: '2019/08/01',
+        expsalary: '25k',
+        score: 80
+    },
+    {
+        name: 'Candidate07',
+        role: 'Data Scientist',
+        available: '2019/05/25',
+        expsalary: '41k',
+        score: 65
+    },
+    {
+        name: 'Candidate08',
+        role: 'Data Scientist',
+        available: '2019/10/01',
+        expsalary: '85k',
+        score: 25
+    },
+    {
+        name: 'Candidate09',
+        role: 'Data Scientist',
+        available: '2019/11/01',
+        expsalary: '55k',
+        score: 55
+    },
+    {
+        name: 'André',
+        role: 'Team Manager',
+        available: '2020/02/21',
+        expsalary: '100k',
+        score: 10
+    },
+    {
+        name: 'Gonçalo',
+        role: 'Shaman',
+        available: '2019/12/05',
+        expsalary: '64k',
+        score: 95
+    },
+    {
+        name: 'Carlos',
+        role: 'Prisioner',
+        available: '2019/04/17',
+        expsalary: '5k',
+        score: 5
+    }
+];

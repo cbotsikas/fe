@@ -1,0 +1,52 @@
+<div [@routerTransition]>
+  <app-page-header [heading]="'Recruitment'" [icon]="'fa-search'"></app-page-header>
+  <div class="row">
+    <div class="col col-xl-12 col-lg-12">
+      <div class="card mb-6">
+        <div class="card-header">
+          <i class="fas fa-table"></i>
+          CV-JOB Matching
+        </div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table datatable class="table table-bordered row-border hover">
+              <!--<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">-->
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Role applied</th>
+                  <th>Availabe at</th>
+                  <th>Expected Salary</th>
+                  <th>Matching Score</th>
+                  <th>CV</th>
+                </tr>
+              </thead>
+              <tfoot>
+                <tr>
+                  <th>Name</th>
+                  <th>Role applied</th>
+                  <th>Availabe at</th>
+                  <th>Expected Salary</th>
+                  <th>Matching Score</th>
+                  <th>CV</th>
+                </tr>
+              </tfoot>
+              <tbody>
+                <tr *ngFor="let recruit of recruits; let i = index">
+                  <td>{{ recruit.name }}</td>
+                  <td>{{ recruit.role }}</td>
+                  <td>{{ recruit.available }}</td>
+                  <td>{{ recruit.expsalary }}</td>
+                  <td><canvas id="Chart{{i}}"></canvas></td>
+                  <td><button class="btn btn-primary" type="button">View CV</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="card-footer small text-muted">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
